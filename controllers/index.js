@@ -8,10 +8,10 @@ exports.indexView = (req, res) => res.render("landing");
 exports.homeView = async (req, res) => {
     try {
         const AboutData = await AboutRights.findOne({});
-        const AnnounceData = await EventRights.find().sort({ creation: -1 });
+        const EventData = await EventRights.find().sort({ creation: -1 });
 
         
-        return res.render("home", {  about: AboutData, announcements: AnnounceData })
+        return res.render("home", {  about: AboutData, events: EventData })
     } catch (err) {
 
         console.log(err);
