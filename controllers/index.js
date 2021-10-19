@@ -1,6 +1,6 @@
 
 const AboutRights = require("../models/about");
-const EventRights = require("../models/event");
+const AnnounceRights = require("../models/announce_rights");
 
 
 exports.indexView = (req, res) => res.render("landing");
@@ -8,10 +8,10 @@ exports.indexView = (req, res) => res.render("landing");
 exports.homeView = async (req, res) => {
     try {
         const AboutData = await AboutRights.findOne({});
-        const EventData = await EventRights.find().sort({ creation: -1 });
+        const AnnouncementData = await AnnounceRights.find().sort({ creation: -1 });
 
         
-        return res.render("home", {  about: AboutData, events: EventData })
+        return res.render("home", {  about: AboutData, announcements: AnnouncementData })
     } catch (err) {
 
         console.log(err);

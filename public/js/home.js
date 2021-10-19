@@ -1,5 +1,5 @@
-events = JSON.parse(events);
-achievements = JSON.parse(achievements);
+
+
 announcements = JSON.parse(announcements);
 var slideIndex = [1, 1];
 var slideId = ["mySlides1", "mySlides2"];
@@ -61,9 +61,8 @@ function renderAnnouncements(order) {
     <div class="card box shadow p-1 mb-1 bg-body rounded">
       <div class="card-body">
       <p class="card-title">
-          ${date.getDate()}
-            ${month[date.getMonth() - 1]}
-              ${date.getFullYear()}
+          ${announcements.creation}
+            
        </p>
        
            <p class="card-text">

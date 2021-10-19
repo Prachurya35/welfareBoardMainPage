@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 const Schema =mongoose.Schema;
 
 
-const EventSchema =new Schema({
+const AnnounceSchema =new Schema({
 
     title: { type: String, required: true },
     description: { type: String, required: true },
@@ -14,5 +14,5 @@ const EventSchema =new Schema({
     
 });
 
-const Event= mongoose.model('event', EventSchema);
-module.exports= Event;
+const Announce= mongoose.model('announce', AnnounceSchema);
+module.exports= Announce;
